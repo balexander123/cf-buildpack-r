@@ -175,6 +175,8 @@ cd $VENDOR_DIR
 wget https://www.stackage.org/stack/linux-x86_64-static
 tar xvzf linux-x86_64-static
 export PATH=$VENDOR_DIR/stack-1.4.0-linux-x86_64/:$PATH
+echo "PATH $PATH"
+ls -l $VENDOR_DIR
 
 wget https://hackage.haskell.org/package/pandoc-1.17.0.3/pandoc-1.17.0.3.tar.gz
 tar xvzf pandoc-1.17.0.3.tar.gz
