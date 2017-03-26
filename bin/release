@@ -1,6 +1,7 @@
 #!/usr/bin/env bash
 # bin/release <build-dir>
 
+pandoc -v
 cat <<EOF
 config_vars:
   CAN_SET_IN_RELEASE: doesnt_seem_to_work
