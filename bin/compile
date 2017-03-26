@@ -169,6 +169,19 @@ cp -R /app/vendor/gcc-$GCC_VERSION $VENDOR_DIR/gcc-$GCC_VERSION
 cp -R /app/vendor/glibc-$GLIBC_VERSION $VENDOR_DIR/glibc-$GLIBC_VERSION
 cp -R /app/vendor/R $VENDOR_DIR/R
 
+# install pandoc
+cd $VENDOR_DIR
+# need stack
+wget https://www.stackage.org/stack/linux-x86_64-static
+tar xvzf linux-x86_64-static
+export PATH=$VENDOR_DIR/stack-1.4.0-linux-x86_64/:$PATH
+
+wget https://hackage.haskell.org/package/pandoc-1.17.0.3/pandoc-1.17.0.3.tar.gz
+tar xvzf pandoc-1.17.0.3.tar.gz
+cd pandoc-1.17.0.3
+stack setup
+stack install --test
+
 # HACK
 cp $VENDOR_DIR/gcc-$GCC_VERSION/lib64/* $VENDOR_DIR/R/lib64/R/lib
 
