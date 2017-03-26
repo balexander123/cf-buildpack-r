@@ -174,7 +174,7 @@ cd $VENDOR_DIR
 # need stack
 wget https://www.stackage.org/stack/linux-x86_64-static
 tar xvzf linux-x86_64-static
-export PATH=$VENDOR_DIR/stack-1.4.0-linux-x86_64/:$PATH
+export PATH=$VENDOR_DIR/stack-1.4.0-linux-x86_64-static/:$PATH
 echo "PATH $PATH"
 ls -l $VENDOR_DIR
 
